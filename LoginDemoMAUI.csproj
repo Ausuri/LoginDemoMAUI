@@ -49,7 +49,46 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="LoginDemoMAUI.DAL\**" />
+	  <AndroidResource Remove="LoginDemoMAUI.Shared\**" />
+	  <AndroidResource Remove="NewFolder\**" />
+	  <Compile Remove="LoginDemoMAUI.DAL\**" />
+	  <Compile Remove="LoginDemoMAUI.Shared\**" />
+	  <Compile Remove="NewFolder\**" />
+	  <EmbeddedResource Remove="LoginDemoMAUI.DAL\**" />
+	  <EmbeddedResource Remove="LoginDemoMAUI.Shared\**" />
+	  <EmbeddedResource Remove="NewFolder\**" />
+	  <MauiCss Remove="LoginDemoMAUI.DAL\**" />
+	  <MauiCss Remove="LoginDemoMAUI.Shared\**" />
+	  <MauiCss Remove="NewFolder\**" />
+	  <MauiXaml Remove="LoginDemoMAUI.DAL\**" />
+	  <MauiXaml Remove="LoginDemoMAUI.Shared\**" />
+	  <MauiXaml Remove="NewFolder\**" />
+	  <None Remove="LoginDemoMAUI.DAL\**" />
+	  <None Remove="LoginDemoMAUI.Shared\**" />
+	  <None Remove="NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="LoginDemoMAUI.DAL\LoginDemoMAUI.DAL.csproj" />
+	  <ProjectReference Include="LoginDemoMAUI.Shared\LoginDemoMAUI.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\FeedPage.xaml.cs">
+	    <DependentUpon>FeedPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\FeedPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
